@@ -1,5 +1,11 @@
+(.venv) PS C:\Users\niama\OneDrive\Desktop\CODEPATH\AI110\WEEK8\studysync-ai> Get-Content .gitignore
 .venv/
 __pycache__/
 *.pyc
 .pytest_cache/
 .DS_Store
+.env
+(.venv) PS C:\Users\niama\OneDrive\Desktop\CODEPATH\AI110\WEEK8\studysync-ai> git check-ignore logs/studysync.log
+(.venv) PS C:\Users\niama\OneDrive\Desktop\CODEPATH\AI110\WEEK8\studysync-ai> 
+# Generated application logs
+logs/

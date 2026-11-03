@@ -1,7 +1,0 @@
-flowchart TD
-    A[data/study_spots.csv] --> B[load_study_spots<br/>csv.DictReader, convert distance to float and seats to int]
-    P[Student profile<br/>max_noise, max_distance, min_seats] --> C
-    B --> C[score_study_spot<br/>runs once per spot, returns score and reasons]
-    C --> D[rank_study_spots<br/>sorted by score descending, slice top k]
-    D --> E[format_results<br/>one numbered line per spot with score and reasons]
-    E --> F[/Printed output or Streamlit tab/]

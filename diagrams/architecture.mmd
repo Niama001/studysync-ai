@@ -1,0 +1,31 @@
+flowchart TD
+    A[Student] --> B[Streamlit Application]
+
+    B --> C[AI Study Spot Advisor UI]
+
+    C --> D[Student Request and Preferences]
+
+    D --> E[Study Spot Retriever]
+
+    F[data/study_spots.csv] --> G[Load Study Spot Data]
+    G --> E
+
+    E --> H[Keyword Matching and Seat Filtering]
+
+    H --> I{Matching Spots Found?}
+
+    I -->|No| J[Display No Matching Results]
+
+    I -->|Yes| K[Existing Ranking Algorithm]
+
+    K --> L[Ranked Study Spot Recommendations]
+
+    L --> M[Gemini AI Generator]
+
+    M --> N[Grounded Explanation Using Retrieved Data]
+
+    N --> O[Display Recommendations and AI Explanation]
+
+    M --> P[Logging and Error Handling]
+
+    P --> Q[Retry Temporary API Failures]
