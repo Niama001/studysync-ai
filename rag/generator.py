@@ -29,15 +29,16 @@ def generate_study_spot_explanation(query, ranked_spots):
     Retry the request if Gemini is temporarily unavailable.
     """
 
+    # Check whether we have any study spots to explain
+    # (No API key is needed if there is nothing to explain)
+    if not ranked_spots:
+        return "I couldn't find any study spots matching your request."
+
     # Check whether the Gemini API key was loaded
     if not GEMINI_API_KEY:
         raise ValueError(
             "Gemini API key not found. Check your .env file."
         )
-
-    # Check whether we have any study spots to explain
-    if not ranked_spots:
-        return "I couldn't find any study spots matching your request."
 
 
     # Record that StudySync is starting AI explanation generation
